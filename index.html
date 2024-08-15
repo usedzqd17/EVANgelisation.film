@@ -18,6 +18,7 @@
 
         h1 {
             margin-bottom: 40px;
+            text-align: center;
         }
 
         .container {
@@ -32,9 +33,17 @@
             background-color: gray;
             border-radius: 15px;
             transition: transform 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .square:hover {
+            transform: scale(1.1);
+        }
+
+        .square:hover .info {
             transform: scale(1.1);
         }
 
@@ -91,15 +100,15 @@
     <h1>Clique sur le "I" pour voir quel film sont dans chaque cadre</h1>
 
     <div class="container">
-        <div class="square">
-            <div class="info" data-info="Information sur le lien 1" onclick="showModal('Information sur le lien 1')">i</div>
-        </div>
-        <div class="square">
-            <div class="info" data-info="Information sur le lien 2" onclick="showModal('Information sur le lien 2')">i</div>
-        </div>
-        <div class="square">
-            <div class="info" data-info="Information sur le lien 3" onclick="showModal('Information sur le lien 3')">i</div>
-        </div>
+        <a href="https://www.example.com" class="square">
+            <div class="info" data-info="Film 1" onclick="showModal('Film 1')">i</div>
+        </a>
+        <a href="https://www.example.com" class="square">
+            <div class="info" data-info="Film 2" onclick="showModal('Film 2')">i</div>
+        </a>
+        <a href="https://www.example.com" class="square">
+            <div class="info" data-info="Film 3" onclick="showModal('Film 3')">i</div>
+        </a>
     </div>
 
     <div id="myModal" class="modal">
