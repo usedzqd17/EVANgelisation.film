@@ -1,1 +1,43 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .square:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://www.example.com" class="square"></a>
+        <a href="https://www.example.com" class="square"></a>
+        <a href="https://www.example.com" class="square"></a>
+    </div>
+</body>
+</html>
