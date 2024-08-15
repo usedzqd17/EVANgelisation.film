@@ -9,9 +9,15 @@
             margin: 0;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: black;
+            color: white;
+        }
+
+        h1 {
+            margin-bottom: 40px;
         }
 
         .container {
@@ -82,6 +88,8 @@
     </style>
 </head>
 <body>
+    <h1>Clique sur le "I" pour voir quel film sont dans chaque cadre</h1>
+
     <div class="container">
         <div class="square">
             <div class="info" data-info="Information sur le lien 1" onclick="showModal('Information sur le lien 1')">i</div>
