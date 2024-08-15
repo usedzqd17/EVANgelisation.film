@@ -26,114 +26,99 @@
             gap: 20px;
         }
 
-        .square {
+        .square-container {
+            text-align: center;
             position: relative;
+        }
+
+        .square {
             width: 100px;
             height: 100px;
             background-color: gray;
             border-radius: 15px;
             transition: transform 0.3s ease;
-            text-decoration: none;
             display: flex;
             justify-content: center;
             align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
         }
 
         .square:hover {
             transform: scale(1.1);
         }
 
-        .square:hover .info {
-            transform: scale(1.1);
-        }
-
         .info {
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            width: 20px;
-            height: 20px;
-            background-color: black;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 20px;
-            font-size: 14px;
-            font-family: Arial, sans-serif;
+            margin-top: 10px;
+            font-size: 12px;
+            color: gray;
             cursor: pointer;
         }
 
         .modal {
             display: none;
-            position: fixed;
+            position: absolute;
             z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
             background-color: white;
-            padding: 20px;
+            padding: 10px;
             border-radius: 10px;
-            text-align: center;
-            width: 300px;
-            max-width: 80%;
+            width: 200px;
+            color: black;
+            text-align: left;
+            font-size: 14px;
         }
 
         .close {
             color: red;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: bold;
             position: absolute;
-            top: 10px;
-            right: 20px;
+            top: 5px;
+            right: 10px;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <h1>Clique sur le "I" pour voir quel film sont dans chaque cadre</h1>
+    <h1>Clique sur un carré pour visiter le lien associé</h1>
 
     <div class="container">
-        <a href="https://www.example.com" class="square">
-            <div class="info" data-info="Film 1" onclick="showModal('Film 1')">i</div>
-        </a>
-        <a href="https://www.example.com" class="square">
-            <div class="info" data-info="Film 2" onclick="showModal('Film 2')">i</div>
-        </a>
-        <a href="https://www.example.com" class="square">
-            <div class="info" data-info="Film 3" onclick="showModal('Film 3')">i</div>
-        </a>
-    </div>
-
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <p id="modal-text"></p>
+        <div class="square-container">
+            <a href="https://www.example.com" class="square">Lien 1</a>
+            <div class="info" onclick="showModal(this)">i</div>
+            <div class="modal">
+                <span class="close" onclick="closeModal(this)">&times;</span>
+                <p>Voici plus d'informations sur le lien 1.</p>
+            </div>
+        </div>
+        <div class="square-container">
+            <a href="https://www.example.com" class="square">Lien 2</a>
+            <div class="info" onclick="showModal(this)">i</div>
+            <div class="modal">
+                <span class="close" onclick="closeModal(this)">&times;</span>
+                <p>Voici plus d'informations sur le lien 2.</p>
+            </div>
+        </div>
+        <div class="square-container">
+            <a href="https://www.example.com" class="square">Lien 3</a>
+            <div class="info" onclick="showModal(this)">i</div>
+            <div class="modal">
+                <span class="close" onclick="closeModal(this)">&times;</span>
+                <p>Voici plus d'informations sur le lien 3.</p>
+            </div>
         </div>
     </div>
 
     <script>
-        function showModal(info) {
-            document.getElementById('modal-text').textContent = info;
-            document.getElementById('myModal').style.display = "flex";
+        function showModal(element) {
+            const modal = element.nextElementSibling;
+            modal.style.display = 'block';
         }
 
-        function closeModal() {
-            document.getElementById('myModal').style.display = "none";
-        }
-
-        // Fermer la modal si l'utilisateur clique en dehors
-        window.onclick = function(event) {
-            let modal = document.getElementById('myModal');
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
+        function closeModal(element) {
+            const modal = element.parentElement;
+            modal.style.display = 'none';
         }
     </script>
 </body>
