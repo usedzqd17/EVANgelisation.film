@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<div class="retour">
+    <a href="index.html" class="link"> <div class="li">Accueil</div></a>
+
+</div>
+
+<p>les différentes pages :</p>
+
+<div class="container">
+    <div class="square-container">
+        <a href="https://mega.nz/folder/JvFXRKhb#6hiZ7biFIkHcn2fo-WlS_Q" class="square">Page 1</a>
+        <div class="info" onclick="showModal(this)">ⓘ</div>
+        <div class="modal">
+            <span class="close" onclick="closeModal(this)">&times;</span>
+            <p>Avengers: L’Ère d’Ultron 2015 -- Ant-Man -- Captain America: Civil War  --</p>
+        </div>
+    </div>
+    <div class="square-container">
+        <a href="later.html" class="square">Page 2</a>
+        <div class="info" onclick="showModal(this)">ⓘ</div>
+        <div class="modal">
+            <span class="close" onclick="closeModal(this)">&times;</span>
+            <p></p>
+        </div>
+    </div>
+    <div class="square-container">
+        <a href="later.html" class="square">Page 3</a>
+        <div class="info" onclick="showModal(this)">ⓘ</div>
+        <div class="modal">
+            <span class="close" onclick="closeModal(this)">&times;</span>
+            <p>PLUS TARD</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showModal(element) {
+        const modal = element.nextElementSibling;
+        modal.style.display = 'block';
+    }
+
+    function closeModal(element) {
+        const modal = element.parentElement;
+        modal.style.display = 'none';
+    }
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
