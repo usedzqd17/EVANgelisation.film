@@ -4,111 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'Accueil</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: black;
-            color: white;
-        }
-
-        h1 {
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .container {
-            display: flex;
-            gap: 20px;
-        }
-
-        .square-container {
-            text-align: center;
-            position: relative;
-        }
-
-        .square {
-            width: 100px;
-            height: 100px;
-            background-color: gray;
-            border-radius: 15px;
-            transition: transform 0.3s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: white;
-            font-size: 14px;
-        }
-
-        .square:hover {
-            transform: scale(1.1);
-        }
-
-        .info {
-            margin-top: 10px;
-            font-size: 12px;
-            color: gray;
-            cursor: pointer;
-        }
-
-        .modal {
-            display: none;
-            position: absolute;
-            z-index: 1;
-            background-color: white;
-            padding: 10px;
-            border-radius: 10px;
-            width: 200px;
-            color: black;
-            text-align: left;
-            font-size: 14px;
-        }
-
-        .close {
-            color: red;
-            font-size: 16px;
-            font-weight: bold;
-            position: absolute;
-            top: 5px;
-            right: 10px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Clique sur un carré pour visiter le lien associé</h1>
-      <h1>Le petit "ⓘ" sert a voir quels films sont des les Pages </h1>
-    
-      <li><a href="https://usedzqd17.github.io/EVANgelisation.film/formulaire/formulaire/formulaire.html">Formulaire</a></li>
-     <h1>En cas de problème avec mega ou autre, dis moi tout ce formulaire (plus simple pour moi )</h1>
-   
-    
 
+    <div class="addition-container">
+        <h2>Ajouts</h2>
+        <ul>
+            
+            <div class="news">
+                <li> <div class="lo">
+                    <p>Gardiens de la Galaxie Vol 2 ( page 1 )</p>
+                </div> </li>
+
+
+            <div class="news1">
+                <li> <div class="lo1">
+                    <p> Les Gardiens de la Galaxie ( page 1 )</p>
+                </div> </li>
+
+            
+            <div class="news2">
+                <li> <div class="lo2">
+                    <p>Captain America: Le Soldat de l'Hiver ( page 1 )</p>
+                </div></li>
+
+        </ul>
+        <h3><p>Restez à l'affut !!!</p></h3>
+    </div>
+    
+    <h1>Clique sur un carré pour visiter le lien associé</h1>
+    
+    <li><a href="https://usedzqd17.github.io/EVANgelisation.film/formulaire/formulaire/formulaire.html">Formulaire</a></li>
+    <h1>En cas de problème avec mega ou autre, dis-moi tout via ce formulaire (plus simple pour moi)</h1>
+   
     <div class="container">
         <div class="square-container">
             <a href="https://mega.nz/folder/zMIFESSb#5x1zXgsUFMWw-HhU5mvrvg" class="square">Page 1</a>
             <div class="info" onclick="showModal(this)">ⓘ</div>
             <div class="modal">
                 <span class="close" onclick="closeModal(this)">&times;</span>
-                <p>    Captain America: First Avenger
-    Captain Marvel
-    Iron Man
-    Iron Man 2
-    L’Incroyable Hulk
-    Thor
-    Avengers (2012)
-    Iron-man-3 
-    Thor Le Monde des tenebres
-    captain-america-le-soldat-de-l'hiver
-    Les Gardiens de la Galaxie 
-    Les Gardiens de la Galaxie Vol 2
-                    
-                </p>
+                <p>Captain America: First Avenger, Captain Marvel, Iron Man, Iron Man 2, L’Incroyable Hulk, Thor, Avengers (2012), Iron Man 3, Thor Le Monde des ténèbres, Captain America: Le Soldat de l'Hiver, Les Gardiens de la Galaxie, Les Gardiens de la Galaxie Vol 2</p>
             </div>
         </div>
         <div class="square-container">
@@ -116,7 +52,7 @@
             <div class="info" onclick="showModal(this)">ⓘ</div>
             <div class="modal">
                 <span class="close" onclick="closeModal(this)">&times;</span>
-                <p>PLUS TARD </p>
+                <p>PLUS TARD</p>
             </div>
         </div>
         <div class="square-container">
